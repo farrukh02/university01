@@ -12,16 +12,7 @@ st.set_page_config(
 )
 
 # read csv from a github repo
-dataset_url = "tahlilv.csv"
-
-
-# read csv from a URL
-@st.experimental_memo
-def get_data() -> pd.DataFrame:
-    return pd.read_csv(dataset_url)
-
-
-df = get_data()
+df = pd.read_csv('tahlilv.csv')
 
 # dashboard title
 st.title("Панели идоракунии маълумот дар вақти воқеӣ")
