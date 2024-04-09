@@ -12,13 +12,13 @@ st.set_page_config(
 )
 
 # read csv from a github repo
-dataset_url = "tahlil.xlsx"
+dataset_url = "tahlilv.csv"
 
 
 # read csv from a URL
 @st.experimental_memo
 def get_data() -> pd.DataFrame:
-    return pd.read_excel(dataset_url)
+    return pd.read_csv(dataset_url)
 
 
 df = get_data()
@@ -89,5 +89,5 @@ for seconds in range(200):
 
         st.markdown("### Detailed Data View")
         st.dataframe(df)
-        time.sleep(1)
+        #time.sleep(1)
 
